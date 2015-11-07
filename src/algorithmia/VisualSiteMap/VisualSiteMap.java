@@ -23,6 +23,6 @@ public class VisualSiteMap {
         Map<String,List<String>> sitemap = Algorithmia.algo("/web/SiteMap/0.1.2").pipe(url).as(new TypeToken<Map<String,List<String>>>());
         
         
-        return "Hello " + input;
+        return null;
     }
 }
