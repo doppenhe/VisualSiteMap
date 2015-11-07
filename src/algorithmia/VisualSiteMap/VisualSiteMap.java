@@ -18,10 +18,11 @@ import java.util.*;
  */
 public class VisualSiteMap {
     // The input and output of apply() automatically turns into JSON
-    public String apply(String startingUrl) throws Exception {
+    public String apply(String startingUrl, int depth) throws Exception {
         // Your algorithm code goes here
         
-        Map<String,List<String>> sitemap = Algorithmia.algo("/web/SiteMap/0.1.2").pipe(startingUrl).as(new TypeToken<Map<String,List<String>>>(){});
+        Object[] mapperInput = {url, depth};
+        Map<String,List<String>> sitemap = Algorithmia.algo("/web/SiteMap/0.1.2").pipe(mapperInput).as(new TypeToken<Map<String,List<String>>>(){});
         Set<String> urls = new HashSet<String>();
         for(String key : sitemap.keySet()) {
             List<String> values = sitemap.get(key);
