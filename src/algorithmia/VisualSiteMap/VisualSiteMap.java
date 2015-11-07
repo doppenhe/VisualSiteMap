@@ -31,7 +31,7 @@ public class VisualSiteMap {
         }
         Integer count = 0;
         for(String key : urls) {
-            count = count ++;
+            count++;
             URL url = new URL(key);
             String dataUrl = "data://.algo/perm/" + url.getHost() + url.getPath().replace("/","-") + ".png";
             System.out.println(dataUrl);
