@@ -22,7 +22,7 @@ public class VisualSiteMap {
         // Your algorithm code goes here
         
         Object[] mapperInput = {startingUrl, depth};
-        Map<String,List<String>> sitemap = Algorithmia.algo("/web/SiteMap/0.1.2").pipe(mapperInput).as(new TypeToken<Map<String,List<String>>>(){});
+        Map<String,List<String>> sitemap = Algorithmia.algo("/web/BreadthFirstSiteMap/0.2.17").pipe(mapperInput).as(new TypeToken<Map<String,List<String>>>(){});
         Set<String> urls = new HashSet<String>();
         for(String key : sitemap.keySet()) {
             List<String> values = sitemap.get(key);
