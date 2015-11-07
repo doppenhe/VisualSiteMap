@@ -18,7 +18,7 @@ import java.util.*;
  */
 public class VisualSiteMap {
     // The input and output of apply() automatically turns into JSON
-    public String apply(String startingUrl, int depth) throws Exception {
+    public String apply(String startingUrl, int depth, viewWidth, viewHeight) throws Exception {
         // Your algorithm code goes here
         
         Object[] mapperInput = {startingUrl, depth};
@@ -33,7 +33,7 @@ public class VisualSiteMap {
             URL url = new URL(key);
             String dataUrl = "data://.algo/perm/" + url.getHost() + "|" + url.getPath().replace("/","-") + ".png";
             System.out.println(dataUrl);
-            Object[] algoInput = {key, dataUrl, 1300, 5000};
+            Object[] algoInput = {key, dataUrl, viewWidth, viewHeight};
             String ok = Algorithmia.algo("bkyan/url2png").pipe(algoInput).as(new TypeToken<String>(){});
         }
         return null;
