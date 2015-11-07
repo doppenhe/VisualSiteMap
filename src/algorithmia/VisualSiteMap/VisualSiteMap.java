@@ -36,6 +36,6 @@ public class VisualSiteMap {
             Object[] algoInput = {key, dataUrl, viewWidth, viewHeight};
             String ok = Algorithmia.algo("bkyan/url2png").pipe(algoInput).as(new TypeToken<String>(){});
         }
-        return null;
+        return "Done!";
     }
 }
