@@ -18,10 +18,10 @@ import java.util.*;
  */
 public class VisualSiteMap {
     // The input and output of apply() automatically turns into JSON
-    public String apply(String startingUrl, int depth,int viewWidth,int viewHeight) throws Exception {
+    public String apply(String startingUrl, int maxPages,int viewWidth,int viewHeight) throws Exception {
         // Your algorithm code goes here
         
-        Object[] mapperInput = {startingUrl, depth};
+        Object[] mapperInput = {startingUrl, maxPages};
         Map<String,List<String>> sitemap = Algorithmia.algo("/web/BreadthFirstSiteMap/0.2.17").pipe(mapperInput).as(new TypeToken<Map<String,List<String>>>(){});
         Set<String> urls = new HashSet<String>();
         for(String key : sitemap.keySet()) {
