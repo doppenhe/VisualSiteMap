@@ -1,6 +1,7 @@
 package algorithmia.VisualSiteMap;
 
 import com.algorithmia.*;
+import java.net.*;
 import com.algorithmia.algo.*;
 import com.algorithmia.data.*;
 import com.google.gson.*;
