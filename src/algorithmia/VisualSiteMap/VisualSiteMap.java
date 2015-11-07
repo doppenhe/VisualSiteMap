@@ -31,6 +31,7 @@ public class VisualSiteMap {
         for(String key : urls) {
             URL url = new URL(key);
             String dataUrl = "data://.algo/perm/" + url.getHost() + "|" + url.getPath();
+            System.out.println(dataUrl);
             Object[] algoInput = {key, dataUrl, 0, 0};
             String ok = Algorithmia.algo("bkyan/url2png").pipe(algoInput).as(new TypeToken<String>(){});
         }
