@@ -21,7 +21,7 @@ public class VisualSiteMap {
     public String apply(String startingUrl, int depth) throws Exception {
         // Your algorithm code goes here
         
-        Object[] mapperInput = {url, depth};
+        Object[] mapperInput = {startingUrl, depth};
         Map<String,List<String>> sitemap = Algorithmia.algo("/web/SiteMap/0.1.2").pipe(mapperInput).as(new TypeToken<Map<String,List<String>>>(){});
         Set<String> urls = new HashSet<String>();
         for(String key : sitemap.keySet()) {
