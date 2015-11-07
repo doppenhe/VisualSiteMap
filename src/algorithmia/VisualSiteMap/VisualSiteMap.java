@@ -20,8 +20,6 @@ public class VisualSiteMap {
     // The input and output of apply() automatically turns into JSON
     public String apply(String startingUrl, int depth,int viewWidth,int viewHeight) throws Exception {
         // Your algorithm code goes here
-        if (viewHeight == null) { viewHeight = 900;}
-        if (viewWidth == null)  { viewWidth = 1300;}
         
         Object[] mapperInput = {startingUrl, depth};
         Map<String,List<String>> sitemap = Algorithmia.algo("/web/SiteMap/0.1.2").pipe(mapperInput).as(new TypeToken<Map<String,List<String>>>(){});
