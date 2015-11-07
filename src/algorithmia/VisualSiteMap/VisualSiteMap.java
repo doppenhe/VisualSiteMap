@@ -20,7 +20,7 @@ public class VisualSiteMap {
     public String apply(String url) throws Exception {
         // Your algorithm code goes here
         
-        Map<String,List<String>> sitemap = Algorithmia.algo("/web/SiteMap/0.1.2").pipe(url).as(new TypeToken<Map<String,List<String>>>());
+        Map<String,List<String>> sitemap = Algorithmia.algo("/web/SiteMap/0.1.2").pipe(url).as(new TypeToken<Map<String,List<String>>>(){});
         
         
         return null;
