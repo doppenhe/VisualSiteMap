@@ -38,6 +38,6 @@ public class VisualSiteMap {
             Object[] algoInput = {key, dataUrl, viewWidth, viewHeight};
             String ok = Algorithmia.algo("bkyan/url2png").pipe(algoInput).as(new TypeToken<String>(){});
         }
-        return "Done!" + " " + count + " pages imaged.";
+        return "Done!" + " " + count + " pages imaged. And saved to " + dataUrl;
     }
 }
