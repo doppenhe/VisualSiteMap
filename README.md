@@ -3,6 +3,7 @@ algorithmia algorithm for visual site map
 
 
 Hosted on Algorithmia.com @ https://algorithmia.com/algorithms/diego/VisualSiteMap
+[![Algorithmia.com](https://algorithmia.com/algorithms/diego/VisualSiteMap/badge)](https://algorithmia.com/algorithms/diego/VisualSiteMap)
 
 
 
